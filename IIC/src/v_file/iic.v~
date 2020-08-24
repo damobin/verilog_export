@@ -1,0 +1,21 @@
+// iic v
+module IIC(
+ input  wire clk,
+ input  wire reset,
+ output  reg sda,
+ output reg scl
+);
+/*
+always@(posedge clk or negedge reset) begin
+    if(~reset)
+         count <= 4'b0000;
+    else if(enable)
+         count <= count + 1'b1;
+end
+*/
+always@(posedge clk or negedge reset) begin
+	scl <= 1'b1;
+	sda <= 1'bz;
+end
+
+endmodule
